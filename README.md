@@ -1,2 +1,1 @@
-# paper_template
-A generic starter template for writing an HCI research paper
+A generic starter template for writing an HCI research paper in LaTex
