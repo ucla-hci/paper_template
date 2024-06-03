@@ -3,8 +3,8 @@
 %%%  @BibTeX-style-file{
 %%%     author          = "Nelson H. F. Beebe, Boris Veytsman and Gerald Murray",
 %%%     version         = "2.1",
-%%%     acmart-version  = "1.79",
-%%%     date            = "14 June 2017",
+%%%     acmart-version  = "1.90",
+%%%     date            = "Mar 26 2023",
 %%%     filename        = "ACM-Reference-Format.bst",
 %%%     email           = "borisv@lk.net, boris@varphi.com",
 %%%     codetable       = "ISO/ASCII",
@@ -152,7 +152,7 @@ FUNCTION { empty.or.unknown }
 }
 
 FUNCTION { empty.or.zero }
-{ 
+{
   %% Examine the top entry and push 1 if it is empty, or is zero
   duplicate$ empty$
     { pop$ #1 }
@@ -2005,7 +2005,7 @@ FUNCTION { calc.basic.label }
   if$
   duplicate$
   year empty.or.unknown
-    { "[n.\,d.]" }
+    { "{[n.\,d.]}" }
     { year field.or.null purify$ #-1 #4 substring$}
   if$
   *
@@ -2053,7 +2053,7 @@ FUNCTION { calc.label }
   % save the year for sort processing afterwards (adding a, b, c, etc.)
   %
   year empty.or.unknown
-    { "[n.\,d.]" }
+    { "{[n.\,d.]}" }
     { year field.or.null purify$ #-1 #4 substring$}
   if$
   'label.year :=
